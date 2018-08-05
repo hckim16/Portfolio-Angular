@@ -1,0 +1,81 @@
+<!--<nav class="navbar navbar-expand-sm navbar-light bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Portfolio
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/project">Projects</a>
+          <a class="dropdown-item" href="#">Resume</a>
+          <a class="dropdown-item" href="#">Certificates</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Me</a>
+      </li>
+    </ul>
+  </div>
+</nav>-->
+<header>
+<div class="menu-btn" (click)="closeMenu()" [class.close]="menuBtn">
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+
+</div>
+<nav class="menu" (click)="closeMenu()" [class.show]="menu">
+  <div class="menu-branding" (click)="closeMenu()" [class.show]="menuBranding">
+      <div class="portrait"></div>
+      <br>
+      <div class="icons">
+          <a href="https://twitter.com/hyhyisso" target="_blank">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
+      </div>
+      <div class="icons">
+          <a href="https://www.linkedin.com/in/hyochangkim/" target="_blank">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+      </div>
+      <div class="icons">
+          <a href="https://github.com/hckim16" target="_blank">
+              <i class="fab fa-github fa-2x"></i>
+          </a>
+      </div>
+  </div>
+    <ul class="menu-nav" (click)="closeMenu()" [class.show]="menuNav">
+      <li class="nav-item" (click)="closeMenu()" [class.show]="navItem">
+        <a class="nav-link" routerLink="/main">
+              Home
+        </a>
+      </li>
+      <li class="nav-item" (click)="closeMenu()" [class.show]="navItem">
+        <a class="nav-link" routerLink="/about">
+              About Me
+        </a>
+      </li>
+      <li class="nav-item" (click)="closeMenu()" [class.show]="navItem">
+        <a class="nav-link" routerLink="/project">
+              My Work
+        </a>
+      </li>
+      <li class="nav-item" (click)="closeMenu()" [class.show]="navItem">
+          <a class="nav-link" routerLink="/contact">
+              How to reach me
+          </a>
+      </li>
+    </ul>
+</nav>
+</header>
+
