@@ -5,8 +5,8 @@
       <h1 class="lg-heading">
         Email <span style="color:rgb(40, 8, 245)">Me</span>
       </h1>
-      <h2 class="sm-heading"></h2>
-      <br>
+      <h2 class="sm-heading">Apologize for the inconvenience but contact form is not yet functional
+      </h2>
       <div class="icons">
         <a href="https://twitter.com/hyhyisso" target="_blank">
           <i class="fab fa-twitter fa-3x"></i>
@@ -22,45 +22,52 @@
           <i class="fab fa-github fa-3x"></i>
         </a>
       </div>
-
-
-  <div class="row centered-form center-block">
-    <div class="container col-md-10 col-md-offset-1 vertical-center">
-      <div class="jumbotron">
-        <div class="wrapper">
-          <div class="contact">
+<br>
+<br>
+<br>
+      <div class="contact">
+        <div class="container">
+          <div class="jumbotron">
             <h3><i class="fa fa-envelope-o fa-2x" style="margin-right: 1rem;"></i>Send me an Email!</h3>
             <br>
-            <form>
-              <p>
-                <label>Name</label>
-                <input type="text" name="name">
-              </p>
-              <p>
-                <label>Company</label>
-                <input type="text" name="company">
-              </p>
-              <p>
-                <label>Email Address</label>
-                <input type="text" name="email">
-              </p>
-              <p>
-                <label>Phone Number</label>
-                <input type="text" name="phone">
-              </p>
-              <p class="full">
-                <label>Message</label>
-                <textarea type="message" row="15"></textarea>
-              </p>
-              <p class="full">
-                <button>Submit</button>
-              </p>
+            <form (ngSubmit)="onSubmit()" #contact [ngFormOptions]="{ updateOn: 'submit'}">
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <label for="name"></label>
+                <input required [(ngModel)]="model.name" name="name" #name="ngModel" id="name" type="text" class="form-control" placeholder="Your name">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                  Name is required
+                </div>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-envelope-o"></i>
+                <label for="emailAddress"></label>
+                <input required [(ngModel)]="model.emailAddress" name="emailAddress" #emailAddress="ngModel" id="emailAddress" type="email" class="form-control" placeholder="Your email address">
+                <div [hidden]="emailAddress.valid || emailAddress.pristine" class="alert alert-danger">
+                  Email Address is required
+                </div>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-tag"></i>
+                <label for="subject"></label>
+                <input required [(ngModel)]="model.subject" name="subject" #subject="ngModel" id="subject" type="text" class="form-control" placeholder="Subject of your email">
+                <div [hidden]="subject.valid || subject.pristine" class="alert alert-danger">
+                  Subject is required
+                </div>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-pencil"></i>
+                <label for="message"></label>
+                <textarea required [(ngModel)]="model.message" name="message" #message="ngModel" id="message" class="form-control" placeholder="Your Message to me"></textarea>
+                <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                  Message is required
+                </div>
+              </div>
+              <button type="submit" class="button btn-sucess">Send</button>
             </form>
           </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 </main>
     <app-footer></app-footer>
     </body>
