@@ -36,16 +36,17 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-      font-size: 6rem;
-      text-align: center;
+    font-size: 6rem;
+    text-align: center;
   }
 
   &.sm-heading {
-      margin-bottom: 2rem;
-      text-align: center;
-      padding: 0.2rem 1rem;
-      background: rgba(lighten($primary-color, 2), 0.5);
-      border-radius: 15px;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0.2rem 1rem;
+    background: #b1bbec;
+    border-radius: 15px;
   }
 }
 
@@ -88,6 +89,21 @@ main {
   }
 }
 
+.icons {
+  margin-top: 1rem;
+  display: inline-block;
+  margin-right: 1rem;
+
+  a {
+      padding: 0.4rem;
+
+      &:hover {
+          color: $secondary-color;
+          @include easeOut;
+      }
+  }
+}
+
 .icon {
   margin-top: 1rem;
   margin-right: 1rem;
@@ -106,7 +122,7 @@ main {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: solid 5px $secondary-color;
+  border: solid 5px $circle-border-color;
 }
 
 .btn {
@@ -132,7 +148,7 @@ main {
   color: #333;
 }
 
-#main-footer {
+#footer {
   text-align: center;
   padding: 1rem;
   background: darken($primary-color, 10);
@@ -149,7 +165,7 @@ main {
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: rgb(240, 80, 106);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;

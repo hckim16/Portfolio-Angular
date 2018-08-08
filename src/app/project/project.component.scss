@@ -1,3 +1,5 @@
+@import '../../scss/config';
+
 .project-card {
   padding: 40px;
   border-radius: 15px;
@@ -10,11 +12,12 @@
   height: 95%;
   display: inline-block;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .project-title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.5rem;
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-size: 2rem;
 }
 
 .project-header {
@@ -49,4 +52,14 @@ mat-card img{
   object-fit: cover;
   width: 90%;
   height: 60%;
+}
+
+a {
+  padding: 0.4rem;
+  font-size: 1.5rem;
+
+  &:hover {
+      color: $secondary-color;
+      @include easeOut;
+  }
 }

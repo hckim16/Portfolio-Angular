@@ -1,7 +1,8 @@
-$primary-color:#444;
-$secondary-color: rgb(40, 8, 245);
+$primary-color:#536ade;
+$secondary-color: rgb(240, 80, 106);
+$circle-border-color: #323545;
 $show-home-image: true;
-$home-image: url(../assets/images/lightscreen.jpg);
+/*$home-image: url(../assets/images/lightscreen.jpg);*/
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -11,9 +12,13 @@ $background-opacity: 0.9;
 @mixin background {
     @if $show-home-image {
         &#bg-img {
-            background: $home-image;
+            /*background: $home-image;*/
             background-attachment: fixed;
             background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            background-repeat: no-repeat;
 
             &:after {
                 content:'';
@@ -30,7 +35,7 @@ $background-opacity: 0.9;
 }
 
 @function set-text-color($color) {
-    @if(lightness($color) > 40) {
+    @if(lightness($color) > 60) {
         @return #000;
     }
     @else{

@@ -38,7 +38,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   visibility: hidden;
 
   &.show {
@@ -55,6 +55,10 @@
       width: 50%;
       height: 100vh;
       overflow: hidden;
+      .icons {
+        display: inline-block;
+        margin-right: 1rem;
+      }
   }
 
   &-nav {
@@ -84,7 +88,7 @@
           height: 250px;
           background: url('../assets/images/rsz_2sacc_dc_2018-9255-zf-8713-28305-1-005.jpg');
           border-radius: 50%;
-          border: solid 5px $secondary-color;
+          border: solid 7px $circle-border-color;
       }
   }
 
